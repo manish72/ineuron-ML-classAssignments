@@ -1,0 +1,18 @@
+[ 2023-04-26 14:21:24,952 ] 224 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.190:5000
+[ 2023-04-26 14:21:24,952 ] 224 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-04-26 14:21:28,669 ] 224 werkzeug - INFO - 127.0.0.1 - - [26/Apr/2023 14:21:28] "GET /predict HTTP/1.1" 200 -
+[ 2023-04-26 14:21:31,975 ] 224 werkzeug - INFO - 127.0.0.1 - - [26/Apr/2023 14:21:31] "GET /predict HTTP/1.1" 200 -
+[ 2023-04-26 14:21:41,748 ] 73 root - INFO - Dataframe Gathered
+[ 2023-04-26 14:21:41,940 ] 224 werkzeug - INFO - 127.0.0.1 - - [26/Apr/2023 14:21:41] "POST /predict HTTP/1.1" 200 -
+[ 2023-04-26 14:21:48,461 ] 224 werkzeug - INFO - 127.0.0.1 - - [26/Apr/2023 14:21:48] "GET /predict HTTP/1.1" 200 -
+[ 2023-04-26 14:22:00,798 ] 73 root - INFO - Dataframe Gathered
+[ 2023-04-26 14:22:00,813 ] 224 werkzeug - INFO - 127.0.0.1 - - [26/Apr/2023 14:22:00] "POST /predict HTTP/1.1" 200 -
+[ 2023-04-26 14:22:02,083 ] 224 werkzeug - INFO - 127.0.0.1 - - [26/Apr/2023 14:22:02] "GET /predict HTTP/1.1" 200 -
+[ 2023-04-26 14:22:28,151 ] 73 root - INFO - Dataframe Gathered
+[ 2023-04-26 14:22:28,167 ] 224 werkzeug - INFO - 127.0.0.1 - - [26/Apr/2023 14:22:28] "POST /predict HTTP/1.1" 200 -
+[ 2023-04-26 14:22:29,383 ] 224 werkzeug - INFO - 127.0.0.1 - - [26/Apr/2023 14:22:29] "GET /predict HTTP/1.1" 200 -
+[ 2023-04-26 14:22:33,754 ] 73 root - INFO - Dataframe Gathered
+[ 2023-04-26 14:22:33,770 ] 224 werkzeug - INFO - 127.0.0.1 - - [26/Apr/2023 14:22:33] "POST /predict HTTP/1.1" 200 -
