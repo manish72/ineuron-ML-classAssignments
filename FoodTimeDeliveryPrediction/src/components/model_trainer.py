@@ -60,6 +60,8 @@ class ModelTrainer:
                  file_path=self.model_trainer_config.trained_model_file_path,
                  obj=best_model
             )
+
+            return f'Best Model Found , Model Name : {best_model_name} , R2 Score : {best_model_score}'
           
 
         except Exception as e:

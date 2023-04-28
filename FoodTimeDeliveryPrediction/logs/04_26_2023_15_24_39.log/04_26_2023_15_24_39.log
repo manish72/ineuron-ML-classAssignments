@@ -1,9 +1,0 @@
-[ 2023-04-26 15:24:41,516 ] 224 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.0.190:5000
-[ 2023-04-26 15:24:41,516 ] 224 werkzeug - INFO - [33mPress CTRL+C to quit[0m
-[ 2023-04-26 15:24:46,796 ] 224 werkzeug - INFO - 127.0.0.1 - - [26/Apr/2023 15:24:46] "GET /predict HTTP/1.1" 200 -
-[ 2023-04-26 15:25:14,168 ] 73 root - INFO - Dataframe Gathered
-[ 2023-04-26 15:25:14,354 ] 224 werkzeug - INFO - 127.0.0.1 - - [26/Apr/2023 15:25:14] "POST /predict HTTP/1.1" 200 -
-[ 2023-04-26 15:25:18,937 ] 224 werkzeug - INFO - 127.0.0.1 - - [26/Apr/2023 15:25:18] "GET / HTTP/1.1" 200 -

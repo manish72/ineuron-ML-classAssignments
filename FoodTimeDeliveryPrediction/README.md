@@ -10,3 +10,7 @@ conda activate venv/
 ```
 pip install -r requirements.txt
 ```
+### To run project, run below command
+```
+python application.py
+```
