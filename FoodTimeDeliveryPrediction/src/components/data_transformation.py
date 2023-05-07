@@ -85,9 +85,6 @@ class DataTransformation:
             # dropping nan values from dataframe
             data = data.dropna()
 
-            # Replacing NaN values to float type
-            # data = data.replace('NaN', float(np.nan), regex=True)
-
             # Now find the distance between restaurant location and delivery location
             restaurant_coordinates = data[['Restaurant_latitude','Restaurant_longitude']].to_numpy()
             delivery_coordinates = data[['Delivery_location_latitude','Delivery_location_longitude']].to_numpy()
@@ -105,10 +102,6 @@ class DataTransformation:
             # it is found that there are some float and integer values in Time_Orderd and Time_Order_picked column, filter those and also get the data with upto 5 digits
             data['Time_Orderd'] = filter_int_float_values(data['Time_Orderd']).str.slice(0,5)
             data['Time_Order_picked'] = filter_int_float_values(data['Time_Order_picked']).str.slice(0,5)
-
-            ### Since, Time_Orderd and Time_Order_picked columns has some NaN values, it will effect on output variable, we can remove those records
-            # data = data[~data['Time_Orderd'].isnull()]
-            # data = data[~data['Time_Order_picked'].isnull()]
 
             ## Concatenating :00 atlast to make it date format and also we can calculate the preparation time using these values
             data['Time_Orderd'] = data['Time_Orderd'] + ':00'
@@ -129,18 +122,10 @@ class DataTransformation:
             for i in range(len(data['preparation_time'])):
                 data['preparation_time'][i] = data['preparation_time'][i].total_seconds()/60 # converting into minutes
             data['preparation_time'] = data['preparation_time'].astype(float)
-            
-            # applying median into below columns to fill nan values
-            # data['multiple_deliveries'].fillna(data['multiple_deliveries'].median(skipna=True),inplace=True)
-            # data['Vehicle_condition'].fillna(data['Vehicle_condition'].median(skipna=True),inplace=True)
 
             # Round restaurant delivery distance distance to 2 decimals
             data['Restaurant_Delivery_distance'] = round(data['Restaurant_Delivery_distance'],2)
             data['Festival'] = data['Festival'].fillna('No')
-            # data['preparation_time'] = data['preparation_time'].astype(int)
-
-            # Fill festival column data with No value
-            #data['Festival'] = data['Festival'].fillna('No')
 
             # Drop unwanted columns
             data.drop(columns=['ID','Delivery_person_ID','Time_Orderd','Time_Order_picked','Order_Date','preparation1','preparation2','Type_of_order','Restaurant_latitude','Restaurant_longitude','Delivery_location_latitude','Delivery_location_longitude','distance(km)'],axis=1,inplace=True)
